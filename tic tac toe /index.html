@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS One Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <h1>Tic Tac Toe</h1>
+
+      <div class="turn"></div>
+
+      <form class="board">
+        <!-- Row 1 -->
+        <div class="cell">
+          <input type="checkbox" name="cell" id="c1" />
+          <label for="c1"></label>
+        </div>
+        <div class="cell">
+          <input type="checkbox" name="cell" id="c2" />
+          <label for="c2"></label>
+        </div>
+        <div class="cell">
+          <input type="radio" name="cell" id="c3" />
+
+          <label for="c3"></label>
+        </div>
+        <!-- Row2 -->
+        <div class="cell">
+          <input type="radio" name="cell" id="c4" />
+          <label for="c4"></label>
+        </div>
+        <div class="cell">
+          <input type="radio" name="cell" id="c5" />
+          <label for="c5"></label>
+        </div>
+        <div class="cell">
+          <input type="radio" name="cell" id="c6" />
+
+          <label for="c6"></label>
+        </div>
+
+        <!-- Row3 -->
+        <div class="cell">
+          <input type="radio" name="cell" id="c7x" />
+
+          <label for="c7"></label>
+        </div>
+        <div class="cell">
+          <input type="radio" name="cell" id="c8" />
+
+          <label for="c8"></label>
+        </div>
+        <div class="cell">
+          <input type="radio" name="cell" id="c9" />
+          <label for="c9"></label>
+        </div>
+      </form>
+      <div class="win-x">X wins!</div>
+      <div class="win-0">O wins!</div>
+      <div class="info">Click to place X or O.First to 3 in a row wins!</div>
+      <button class="reset" onclick="location.reload()">Reset Game</button>
+    </div>
+  </body>
+</html>

@@ -1,37 +1,19 @@
 let currentOperand = '0';
 let previousOperand = '';
-let operation = undefined;
-
+let operation = null;
 let resetScreen = false;
 
-const currentE1 = document.getElementById('current');
-
-const previousE1 = document.getElementById('previous');
+const currentEl = document.getElementById('current');
+const previousEl = document.getElementById('previous');
 
 function updateDisplay() {
-  currentE1.textContent = formatNumber(currentOperand);
-  if (operation != null) {
-    previousE1.textContent = `${formatNumber(previousOperand)} ${getSynbol(operation)}`;
+  currentEl.textContent = currentOperand;
+
+  if (operation) {
+    previousEl.textContent = `${previousOperand} ${operation}`;
   } else {
-    previousE1.textContent = '';
+    previousEl.textContent = '';
   }
-}
-
-function formatNumber() {
-  const strNum = Number.toString();
-  const [integer, decimal] = strNum.split('.');
-  return `${integer}.${decimal}`;
-}
-
-function appendNumber(number) {
-  if (resetScreen) {
-    currentOperan = '';
-    resetScreen = false;
-  }
-}
-
-function getSymbol() {
-  return { '+': '+', '-': '-', '*': '*', '/': '/', '%': '%' }[op];
 }
 
 function appendNumber(number) {
@@ -39,9 +21,12 @@ function appendNumber(number) {
     currentOperand = '';
     resetScreen = false;
   }
-  if (number === '.' && currentOperand.inlcudes('.')) return;
-  if (currentOperand === '0' && number != '.') currentOperand = '';
-  if (currentOperand.length > 15) return;
+
+  if (number === '.' && currentOperand.includes('.')) return;
+
+  if (currentOperand === '0' && number !== '.') {
+    currentOperand = '';
+  }
 
   currentOperand += number;
   updateDisplay();
@@ -49,71 +34,100 @@ function appendNumber(number) {
 
 function appendOperator(op) {
   if (currentOperand === '') return;
-  if (previousOperand != '') calculate();
+
+  if (previousOperand !== '') {
+    calculate();
+  }
 
   operation = op;
-
-  previousOperand = '';
+  previousOperand = currentOperand;
+  currentOperand = '';
   updateDisplay();
 }
 
 function calculate() {
-  let computation;
   const prev = parseFloat(previousOperand);
   const current = parseFloat(currentOperand);
-  if (isNaN(prev) || isNaN(current === 0)) return;
-  if (operation === '/' && current === 0) {
-    currentOperand = 'Error';
-    resetScreen = true;
-    updateDisplay();
-    return;
-  }
+
+  if (isNaN(prev) || isNaN(current)) return;
+
+  let result;
 
   switch (operation) {
     case '+':
-      computation = prev + current;
+      result = prev + current;
       break;
+
     case '-':
-      computation = prev - current;
+      result = prev - current;
       break;
+
     case '*':
-      computation = prev ^ current;
+      result = prev * current;
       break;
+
     case '/':
-      computation = prev / current;
+      if (current === 0) {
+        currentOperand = 'Error';
+        updateDisplay();
+        return;
+      }
+      result = prev / current;
       break;
+
     case '%':
-      computation = prev % current;
+      result = prev % current;
       break;
 
     default:
       return;
   }
 
-  currentOperand = parseFloat(computation.toFixed(10)).toString();
-  operation = undefined;
+  currentOperand = result.toString();
   previousOperand = '';
+  operation = null;
   resetScreen = true;
+
+  updateDisplay();
+}
+
+function clearAll() {
+  currentOperand = '0';
+  previousOperand = '';
+  operation = null;
   updateDisplay();
 }
 
 function deleteLast() {
-  if (resetScreen) return;
-  currentOperand = currentOperand.toString().slice(0, -1);
+  if (currentOperand.length === 1) {
+    currentOperand = '0';
+  } else {
+    currentOperand = currentOperand.slice(0, -1);
+  }
 
-  if (currentOperand === '' || currentOperand === '-') currentOperand = 0;
   updateDisplay();
 }
 
-// keybored support
-
 document.addEventListener('keydown', (e) => {
-  if ((e.key >= '0' && e.key <= 9) || e.key === '.') appendNumber;
-  e.key;
-  if (['+', '-', '*', '/', '%'].includes(e.key)) appendOperator(e.key);
+  if ((e.key >= '0' && e.key <= '9') || e.key === '.') {
+    appendNumber(e.key);
+  }
 
-  if (e.key === 'Enter' || e.key === '=') calculate();
-  if (e.key === 'Escape') clearAll();
+  if (['+', '-', '*', '/', '%'].includes(e.key)) {
+    appendOperator(e.key);
+  }
 
-  if (e.key === 'Backspace') delateLast();
+  if (e.key === 'Enter' || e.key === '=') {
+    calculate();
+  }
+
+  if (e.key === 'Backspace') {
+    deleteLast();
+  }
+
+  if (e.key === 'Escape') {
+    clearAll();
+  }
 });
+
+updateDisplay();

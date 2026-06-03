@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Menu Button */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 46px;
+  height: 46px;
+  background: #2563eb;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #1d4ed8;
+}
+
+.menu-btn i {
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.icon-bars {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.icon-times {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+#menu-toggle:checked ~ .menu-btn .icon-bars {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+#menu-toggle:checked ~ .menu-btn .icon-times {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+}
+
+#menu-toggle:checked ~ .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: #111827;
+  transition: left 0.4s ease;
+  z-index: 1000;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#menu-toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+.logo {
+  text-align: center;
+  padding: 30px 0;
+  background: #1e293b;
+}
+
+.logo h2 {
+  color: #2563eb;
+  font-size: 24px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-top: 20px;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #2563eb;
+}
+
+.content {
+  text-align: center;
+  padding: 120px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+}

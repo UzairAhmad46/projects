@@ -4,248 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        color: #333;
-      }
-
-      /* ---- NAVBAR ---- */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 60px;
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        position: sticky;
-        top: 0;
-        z-index: 10;
-      }
-
-      .logo {
-        font-size: 22px;
-        font-weight: 700;
-        color: #4f46e5;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 32px;
-      }
-
-      nav ul a {
-        text-decoration: none;
-        color: #555;
-        font-size: 15px;
-      }
-
-      nav ul a:hover {
-        color: #4f46e5;
-      }
-
-      /* ---- HERO ---- */
-      .hero {
-        background: linear-gradient(to right, #4f46e5, #7c3aed);
-        color: white;
-        padding: 100px 60px;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 52px;
-        margin-bottom: 16px;
-      }
-
-      .hero p {
-        font-size: 18px;
-        margin-bottom: 36px;
-        opacity: 0.88;
-      }
-
-      .hero a {
-        background: white;
-        color: #4f46e5;
-        padding: 14px 36px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 15px;
-      }
-
-      /* ---- SERVICES ---- */
-      .services {
-        padding: 80px 60px;
-        text-align: center;
-        background: #f9f9f9;
-      }
-
-      .services h2 {
-        font-size: 34px;
-        margin-bottom: 12px;
-      }
-
-      .services > p {
-        color: #777;
-        margin-bottom: 48px;
-      }
-
-      .cards {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        flex-wrap: wrap;
-      }
-
-      .card {
-        background: white;
-        padding: 36px 28px;
-        border-radius: 16px;
-        width: 230px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-      }
-
-      .card .icon {
-        font-size: 42px;
-        margin-bottom: 16px;
-      }
-
-      .card h3 {
-        font-size: 17px;
-        margin-bottom: 8px;
-      }
-
-      .card p {
-        font-size: 13px;
-        color: #888;
-        line-height: 1.6;
-      }
-
-      /* ---- ABOUT ---- */
-      .about {
-        padding: 80px 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 60px;
-        flex-wrap: wrap;
-        background: white;
-      }
-
-      .about-photo {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #4f46e5, #7c3aed);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 72px;
-      }
-
-      .about-text h2 {
-        font-size: 32px;
-        margin-bottom: 14px;
-      }
-
-      .about-text p {
-        color: #666;
-        max-width: 440px;
-        line-height: 1.8;
-        font-size: 15px;
-      }
-
-      /* ---- CONTACT ---- */
-      .contact {
-        padding: 80px 60px;
-        background: #f3f3ff;
-        text-align: center;
-      }
-
-      .contact h2 {
-        font-size: 34px;
-        margin-bottom: 10px;
-      }
-
-      .contact > p {
-        color: #777;
-        margin-bottom: 36px;
-      }
-
-      .contact form {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        max-width: 480px;
-        margin: 0 auto;
-      }
-
-      .contact input,
-      .contact textarea {
-        padding: 14px 18px;
-        border: 1.5px solid #ddd;
-        border-radius: 10px;
-        font-size: 15px;
-        font-family: inherit;
-        outline: none;
-      }
-
-      .contact textarea {
-        height: 130px;
-        resize: vertical;
-      }
-
-      .contact button {
-        padding: 14px;
-        background: #4f46e5;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-      }
-
-      /* ---- FOOTER ---- */
-      footer {
-        background: #222;
-        color: #aaa;
-        text-align: center;
-        padding: 24px;
-        font-size: 14px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
+    <!--Navbar -->
     <nav>
-      <div class="logo">Alex Dev</div>
+      <div class="logo">Alex Dev 👋</div>
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#Home">Home</a>
+        </li>
+        <li>
+          <a href="#Services">Services</a>
+        </li>
+        <li>
+          <a href="#About">About</a>
+        </li>
+        <li>
+          <a href="#Contact">Contact</a>
+        </li>
       </ul>
     </nav>
 
-    <!-- HERO -->
+    <!-- Hero secion -->
     <section class="hero">
       <h1>Hi, I'm Alex 👋</h1>
-      <p>I design and build modern websites using HTML, CSS & JavaScript.</p>
-      <a href="#contact">Hire Me</a>
+      <p>I design and build modern websites using HTML,CSS ,JAVSCRIPT</p>
+      <a href="#Contact">Hire Me </a>
     </section>
-
     <!-- SERVICES -->
     <section class="services" id="services">
       <h2>My Services</h2>
       <p>Here's what I can do for you</p>
       <div class="cards">
+        <div class="card">
+          <div class="icon">🎨</div>
+          <p>Clean and modern designs that look great</p>
+        </div>
         <div class="card">
           <div class="icon">🎨</div>
           <h3>UI Design</h3>
@@ -254,25 +49,25 @@
         <div class="card">
           <div class="icon">💻</div>
           <h3>Web Development</h3>
-          <p>Fast websites built with HTML & CSS</p>
+          <p>Fast websites built with HTML, CSS, and JavaScript</p>
         </div>
         <div class="card">
           <div class="icon">📱</div>
-          <h3>Responsive Layout</h3>
-          <p>Works perfectly on all screen sizes</p>
+          <h3>Responsive Design</h3>
+          <p>Work perfectly on all screen sizes</p>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="about" id="about">
-      <div class="about-photo">👨‍💻</div>
+      <div class="about-photo"></div>
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          I'm a front-end developer who loves building clean and user-friendly
-          websites. I work with HTML, CSS, and JavaScript. Always learning new
-          things and sharing them on YouTube!
+          I'm front-end Developer who loves building clean and user friendly
+          websites.I work with HTML , CSS AND JAVASCRIPT.Always learning new
+          things and sharing them on Youtube
         </p>
       </div>
     </section>
@@ -280,18 +75,18 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
       <h2>Contact Me</h2>
-      <p>Have a project? Let's work together!</p>
+      <p>Have a Project? let's work together!</p>
       <form>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Your Email" />
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="button">Submit</button>
       </form>
     </section>
 
-    <!-- FOOTER -->
+    <!-- footer -->
     <footer>
-      <p>© 2025 Alex Dev. Built with HTML & CSS.</p>
+      <p>&copy; 2026 Alex Dev. All rights reserved.</p>
     </footer>
   </body>
 </html>

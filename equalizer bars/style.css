@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0f172a, #020617);
+  overflow: hidden;
+}
+
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 220px;
+  padding: 30px;
+}
+
+.bar {
+  width: 14px;
+  height: 50px;
+  border-radius: 999px;
+  background: linear-gradient(to top, #06b6d4, #22d3ee, #67e8f9);
+  box-shadow:
+    0 0 10px rgba(34, 211, 238, 0.5),
+    0 0 25px rgba(34, 211, 238, 0.4),
+    0 0 50px rgba(34, 211, 238, 0.2);
+  transition: height 0.15s linear;
+}

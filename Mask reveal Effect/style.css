@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI' sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #070b14;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 420px;
+  height: 260px;
+  border-radius: 24px;
+  background: #111827;
+  overflow: hidden;
+
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #a1a1a1;
+  max-width: 280px;
+}
+
+.reveal {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00f5ff, #6d28d9, #ff0080);
+  opacity: 0;
+  --x: 50%;
+  --y: 50%;
+  -webkit-mask: radial-gradient(
+    circle 100px at var(--x) var(--y),
+    black 0%,
+    black 60%,
+    transparent 100%
+  );
+
+  mask: radial-gradient(
+    circle 100px at var(--x) var(--y),
+    black 0%,
+    black 60%,
+    transparent 100%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .reveal {
+  opacity: 1;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent);
+  z-index: 1;
+}

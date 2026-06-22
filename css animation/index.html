@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transition Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>CSS Transition</h1>
+
+  <div class="track">
+    <span>linear</span>
+    <div class="car linear">🚗</div>
+  </div>
+
+  <div class="track">
+    <span>ease</span>
+    <div class="car ease">🚗</div>
+  </div>
+
+  <div class="track">
+    <span>ease-in</span>
+    <div class="car ease-in">🚗</div>
+  </div>
+
+  <div class="track">
+    <span>ease-out</span>
+    <div class="car ease-out">🚗</div>
+  </div>
+
+  <div class="track">
+    <span>ease-in-out</span>
+    <div class="car ease-in-out">🚗</div>
+  </div>
+
+  <div class="track">
+    <span>cubic-bezier(0.1,0.7,1,0.1)</span>
+    <div class="car bezier">🚗</div>
+  </div>
+
+  <div class="track">
+    <span>steps(8,start)</span>
+    <div class="car steps">🚗</div>
+  </div>
+
+  <button id="playBtn">Play Animation</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

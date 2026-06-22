@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@starting-style Demo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="eyebrow">CSS Only. No Javascript</div>
+        <h1>
+          JS Used To Be <br />
+          Required For This
+        </h1>
+        <p class="sub">
+          Now we can animate entry using
+          <code class="inline">@starting-style</code>
+        </p>
+      </header>
+
+      <div class="compare">
+        <!-- SNAP -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="panel-title">Without trick</span>
+            <span class="status fail">Snap</span>
+          </div>
+
+          <input type="checkbox" id="snap" class="toggle" />
+
+          <div class="stage">
+            <div class="demo-box snap-box">DIV</div>
+          </div>
+
+          <label for="snap" class="replay-label">Show</label>
+        </div>
+
+        <div class="panel">
+          <div class="panel-label">
+            <span class="panel-title">With @starting-style</span>
+            <span class="status win">Smooth</span>
+          </div>
+
+          <input type="checkbox" id="smooth" class="toggle" />
+
+          <div class="stage">
+            <div class="demo-box smooth-box">DIV</div>
+          </div>
+
+          <label for="smooth" class="replay-label">Show</label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

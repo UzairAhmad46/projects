@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f1021;
+  color: white;
+}
+
+.container {
+  width: 700px;
+  background: #17182d;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+.track {
+  position: relative;
+  height: 70px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.track span {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  background: #17182d;
+  padding: 0 8px;
+  font-size: 20px;
+}
+
+.car {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+}
+
+.track.active .car {
+  left: calc(100% - 80px);
+}
+
+.linear .car,
+.linear {
+  transition: 4s linear;
+}
+
+.ease {
+  transition: 4s ease;
+}
+
+.ease-in {
+  transition: 4s ease-in;
+}
+
+.ease-out {
+  transition: 4s ease-out;
+}
+
+.ease-in-out {
+  transition: 4s ease-in-out;
+}
+
+.bezier {
+  transition: 4s cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+.steps {
+  transition: 4s steps(8, start);
+}
+
+.track.active .linear,
+.track.active .ease,
+.track.active .ease-in,
+.track.active .ease-out,
+.track.active .ease-in-out,
+.track.active .bezier,
+.track.active .steps {
+  transform: translate(600px, -50%);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}

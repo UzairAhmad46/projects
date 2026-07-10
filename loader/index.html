@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gooey Loader • | UzairDev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values=" 1 0 0 0 0
+           0 1 0 0 0
+           0 0 1 0 0 
+           0 0 0 22 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="panel">
+      <div class="label">Loading</div>
+      <div class="goo-wrap" id="gooWrap"></div>
+      <div class="status">Please wait <span> • </span> Fetching data</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

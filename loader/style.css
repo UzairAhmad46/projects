@@ -1,0 +1,80 @@
+:root {
+  --bg: #080810;
+  --purple: #a855f7;
+  --cyan: #06b6d4;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(168, 85, 247, 0.15),
+      transparent 40%
+    ),
+    var(--bg);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow: hidden;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  padding: 60px 70px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.label {
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.goo-wrap {
+  filter: url(#goo);
+  width: 200px;
+  height: 60px;
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--cyan));
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.status {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.status span {
+  color: var(--cyan);
+  font-weight: 600;
+}

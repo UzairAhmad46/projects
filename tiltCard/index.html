@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Tilt Card — Uzair WebCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>3D Tilt <span>Card</span></h1>
+
+    <div class="stage" id="stage">
+      <div class="card" id="card">
+        <div class="glare" id="glare"></div>
+
+        <div class="card-inner">
+          <div class="icon-orb">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M13 2L3 14H9L7 22L21 8H15L13 2Z" />
+            </svg>
+          </div>
+
+          <h2>Pro UI Kit</h2>
+
+          <div class="tag-row">
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+            <span class="tag">No Libraries</span>
+          </div>
+
+          <p>
+            A pure CSS &amp; JS 3D tilt card with dynamic glare, depth layering,
+            and smooth spring-back motion. Move your cursor to feel it react.
+          </p>
+
+          <div class="card-footer">
+            <div class="price">$0 <span>Free</span></div>
+            <button class="cta">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">Move your mouse over the card ✦ works on touch too</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

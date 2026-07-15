@@ -1,0 +1,237 @@
+:root {
+  --bg: #080810;
+  --purple: #a855f7;
+  --cyan: #06b6d4;
+  --card-w: 340px;
+  --card-h: 440px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(168, 85, 247, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(6, 182, 212, 0.15),
+      transparent 40%
+    ),
+    var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: #fff;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+h1 span {
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stage {
+  perspective: 1200px;
+  width: var(--card-w);
+  height: var(--card-h);
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.3s ease;
+  will-change: transform;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--purple),
+    transparent 40%,
+    var(--cyan)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.glare {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 24px;
+  background: radial-gradient(
+    circle at var(--gx, 50%) var(--gy, 50%),
+    rgba(255, 255, 255, 0.25),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.stage:hover .glare {
+  opacity: 1;
+}
+
+.card-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  transform: translateZ(0);
+}
+
+.icon-orb {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--purple), var(--cyan));
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+  transform: translateZ(60px);
+  margin-bottom: 24px;
+}
+
+.icon-orb svg {
+  width: 30px;
+  height: 30px;
+  stroke: #fff;
+}
+
+.card h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  transform: translateZ(50px);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transform: translateZ(40px);
+  flex-grow: 1;
+}
+
+.tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  transform: translateZ(45px);
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  transform: translateZ(55px);
+  align-items: center;
+}
+
+.price {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.price span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.cta {
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.35);
+
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.35);
+  transition:
+    0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 26px rgba(6, 182, 212, 0.45);
+}
+
+.hint {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  text-align: center;
+}

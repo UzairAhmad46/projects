@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parallax Layer Card | Uzair WebCraft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="card" id="card">
+        <div class="layer layer-bg" data-depth="10"></div>
+        <div class="layer layer-grid" data-depth="20"></div>
+        <div class="layer layer-orbs" data-depth="45">
+          <div class="orb o1"></div>
+          <div class="orb o2"></div>
+          <div class="orb o3"></div>
+        </div>
+        <div class="layer-content" data-depth="65">
+          <div class="icon-badge">
+            <svg
+              viewBox=" 0 0  24 24"
+              fill="none"
+              stroke="#080810"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 2  L22 7 L12 12 L2  7 Z" />
+              <path d="M2 17  L12 22 L22  17 " />
+              <path d="M2 12  L12 17 L22  12 " />
+            </svg>
+          </div>
+          <h2>Depth in Motion</h2>
+          <p>
+            A pure layered parallax card -- each element drifts at its own depth
+            as your cursur moves acroos the surface
+          </p>
+          <div class="tag-row">
+            <span class="tag">CSS</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">Parallax</span>
+          </div>
+        </div>
+        <div class="layer layer-shine" data-depth="5"></div>
+        <div class="layer layer-border-glow"></div>
+      </div>
+    </div>
+
+    <div class="credit">Uzair WebCraft</div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sci-Fi Dashboard Card | Uzair WebCraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="scanline"></div>
+      <span class="bracket tl"></span>
+      <span class="bracket tr"></span>
+      <span class="bracket bl"></span>
+      <span class="bracket br"></span>
+
+      <div class="head">
+        <div>
+          <div class="eyebrow">Reactor Node // 04</div>
+          <h2>Core Diagnostics</h2>
+        </div>
+        <div class="status-pill"><span class="dot"></span>Online</div>
+      </div>
+
+      <div class="core-row">
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100">
+            <defs>
+              <linearGradient
+                id="ringGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+            <circle class="ring-track" cx="50" cy="50" r="42" />
+            <circle class="ring-progress" cx="50" cy="50" r="42" />
+          </svg>
+          <div class="ring-center">
+            <span class="val">79%</span>
+            <span class="lbl">Output</span>
+          </div>
+        </div>
+        <div class="core-meta">
+          <div class="title">Fusion Core Alpha</div>
+          <div class="desc">
+            Containment stable. Output nominal at <b>79%</b> capacity, drawing
+            from primary coolant loop.
+          </div>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric-row">
+          <span class="label">CPU</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="--w: 64%"></div>
+          </div>
+          <span class="amount">64%</span>
+        </div>
+        <div class="metric-row">
+          <span class="label">Power</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="--w: 88%"></div>
+          </div>
+          <span class="amount">88%</span>
+        </div>
+        <div class="metric-row">
+          <span class="label">Network</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="--w: 41%"></div>
+          </div>
+          <span class="amount">41%</span>
+        </div>
+      </div>
+
+      <div class="foot">
+        <span class="id">SYS-ID <span>#AX-7712</span></span>
+        <button type="button">Full Scan</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Dashboard Card | Uzair WebCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="card-head">
+        <div class="brand">
+          <div class="brand-mark">W</div>
+
+          <div class="brand-text">
+            <div class="label">Portfolio</div>
+            <div class="name">Uzair WebCraft</div>
+          </div>
+        </div>
+
+        <div class="live-pill">
+          <span class="live-dot"></span>
+          Live
+        </div>
+      </div>
+
+      <div class="value-block">
+        <div class="value-label">Total Balance</div>
+
+        <div class="value-row">
+          <div class="value">$48,392.17</div>
+
+          <div class="value-change">
+            <svg viewBox="0 0 12 12" fill="none">
+              <path
+                d="M6 2v8M2.5 6.5 6 10l3.5-3.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                transform="rotate(180 6 6)"
+              />
+            </svg>
+
+            +12.4%
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-wrap">
+        <svg viewBox="0 0 340 96" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#a855f7" />
+              <stop offset="100%" stop-color="#06b6d4" />
+            </linearGradient>
+
+            <linearGradient id="fillGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#06b6d4" stop-opacity=".35" />
+              <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+
+          <path
+            class="chart-fill"
+            fill="url(#fillGradient)"
+            d="M0,70
+                   L20,66
+                   L45,72
+                   L70,58
+                   L95,62
+                   L120,44
+                   L145,50
+                   L170,34
+                   L195,40
+                   L220,26
+                   L245,32
+                   L270,18
+                   L295,24
+                   L320,10
+                   L340,14
+                   L340,96
+                   L0,96 Z"
+          />
+
+          <path
+            class="chart-line"
+            d="M0,70
+                   L20,66
+                   L45,72
+                   L70,58
+                   L95,62
+                   L120,44
+                   L145,50
+                   L170,34
+                   L195,40
+                   L220,26
+                   L245,32
+                   L270,18
+                   L295,24
+                   L320,10
+                   L340,14"
+          />
+
+          <circle class="chart-dot" cx="340" cy="14" r="4.5" />
+        </svg>
+      </div>
+
+      <div class="range-tabs">
+        <button class="active">1D</button>
+        <button>1W</button>
+        <button>1M</button>
+        <button>1Y</button>
+        <button>ALL</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-label">Top Holdings</div>
+
+      <div class="holding">
+        <div class="coin-icon btc">₿</div>
+
+        <div class="coin-info">
+          <div class="coin-name">Bitcoin</div>
+
+          <div class="coin-sub">0.421 BTC</div>
+        </div>
+
+        <svg class="coin-spark" viewBox="0 0 52 26" preserveAspectRatio="none">
+          <path
+            d="M0,18
+                   8,15
+                   16,19
+                   24,10
+                   32,13
+                   40,6
+                   52,8"
+            fill="none"
+            stroke="#34d399"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div class="coin-right">
+          <div class="coin-price">$67,842</div>
+
+          <div class="coin-change up">+3.2%</div>
+        </div>
+      </div>
+
+      <div class="holding">
+        <div class="coin-icon eth">Ξ</div>
+
+        <div class="coin-info">
+          <div class="coin-name">Ethereum</div>
+
+          <div class="coin-sub">4.86 ETH</div>
+        </div>
+
+        <svg class="coin-spark" viewBox="0 0 52 26" preserveAspectRatio="none">
+          <path
+            d="M0,10
+                   8,13
+                   16,8
+                   24,15
+                   32,12
+                   40,17
+                   52,20"
+            fill="none"
+            stroke="#fb7185"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div class="coin-right">
+          <div class="coin-price">$3,410</div>
+
+          <div class="coin-change down">-1.1%</div>
+        </div>
+      </div>
+
+      <div class="holding">
+        <div class="coin-icon sol">S</div>
+
+        <div class="coin-info">
+          <div class="coin-name">Solana</div>
+
+          <div class="coin-sub">62.5 SOL</div>
+        </div>
+
+        <svg class="coin-spark" viewBox="0 0 52 26" preserveAspectRatio="none">
+          <path
+            d="M0,20
+                   8,17
+                   16,19
+                   24,11
+                   32,14
+                   40,5
+                   52,7"
+            fill="none"
+            stroke="#34d399"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div class="coin-right">
+          <div class="coin-price">$182.30</div>
+
+          <div class="coin-change up">+7.8%</div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn">Withdraw</button>
+
+        <button class="btn primary">Deposit</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

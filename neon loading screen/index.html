@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Neon Loading Screen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="grid"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+    <div class="bracket tl"></div>
+    <div class="bracket tr"></div>
+    <div class="bracket bl"></div>
+    <div class="bracket br"></div>
+    <div class="container">
+      <div class="ring-wrap">
+        <div class="percent" id="percent">0%</div>
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+        <div class="ring ring3"></div>
+        <div class="core"></div>
+      </div>
+      <div
+        style="
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        "
+      >
+        <div class="title">LOADING</div>
+        <div class="subtitle" id="status">INITIALIZING SYSTEM</div>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          align-items: center;
+        "
+      >
+        <div class="bar-wrap">
+          <div class="bar-fill" id="barFill"></div>
+        </div>
+      </div>
+      <div class="bar-label">
+        <span>SYS.BOOT</span>
+        <span id="barPercent">0%</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

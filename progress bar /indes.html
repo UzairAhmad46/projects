@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Interactive Progress Bar</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="badge">PURE CSS + JS</div>
+      <h1>Interactive Progress Bar</h1>
+      <p class="description">Click or drag the progress bar.</p>
+      <div class="card">
+        <div class="top">
+          <strong>Upload Progress</strong>
+          <div class="percent" id="percent">45%</div>
+        </div>
+        <div class="track" id="track">
+          <div class="fill" id="fill"></div>
+          <div class="handle" id="handle"></div>
+        </div>
+        <div class="bottom">
+          <div class="status">Status: <span id="status">In Progress</span></div>
+          <div>
+            <button id="minus">-</button>
+            <button id="plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

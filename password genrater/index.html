@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Password generator</h1>
+      <p class="subtitle">Create strong, random passwords instantly</p>
+
+      <div class="output-row">
+        <span id="password-output"></span>
+        <button class="icon-btn" id="copy-btn" aria-label="Copy password">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="9" y="9" width="13" height="13" rx="2" />
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="control-row">
+        <label for="length">Length</label>
+        <input type="range" id="length" min="6" max="32" value="16" step="1" />
+        <span id="length-value">16</span>
+      </div>
+
+      <div class="options-grid">
+        <label class="option"
+          ><input type="checkbox" id="opt-upper" checked /> Uppercase
+          (A-Z)</label
+        >
+        <label class="option"
+          ><input type="checkbox" id="opt-lower" checked /> Lowercase
+          (a-z)</label
+        >
+        <label class="option"
+          ><input type="checkbox" id="opt-numbers" checked /> Numbers
+          (0-9)</label
+        >
+        <label class="option"
+          ><input type="checkbox" id="opt-symbols" checked /> Symbols
+          (!@#$)</label
+        >
+      </div>
+
+      <p class="error-msg" id="error-msg">
+        Select at least one character type.
+      </p>
+
+      <div class="strength-row">
+        <div class="strength-bar">
+          <div class="strength-fill" id="strength-fill"></div>
+        </div>
+        <span id="strength-label">Weak</span>
+      </div>
+
+      <button class="generate-btn" id="generate-btn">Generate password</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

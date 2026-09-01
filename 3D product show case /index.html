@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Product Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="showcase" id="showcase">
+        <div class="product-wrap" id="productWrap">
+          <div class="glow"></div>
+          <div class="shadow-el"></div>
+          <div class="product" id="product">
+            <div class="face front">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <div class="face back">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <div class="face right">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="face left">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="face top">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="face bottom">
+              <i class="fa-solid fa-battery-full"></i>
+            </div>
+          </div>
+          <div class="hint">Drag to rotate</div>
+        </div>
+
+        <div class="panel">
+          <span class="tag"
+            ><i class="fa-solid fa-sparkles"></i> New Arrival</span
+          >
+          <h1>Aurora Cube<br />Wireless Speaker</h1>
+          <p class="desc">
+            360° immersive sound wrapped in a machined aluminum shell. Tap,
+            tilt, and glide through every angle — built for desks that deserve a
+            little theatre.
+          </p>
+          <div class="price-row">
+            <span class="price">$129</span>
+            <span class="old-price">$179</span>
+          </div>
+          <div class="swatches">
+            <span class="swatch active"><i class="fa-solid fa-check"></i></span>
+            <span class="swatch"><i class="fa-solid fa-check"></i></span>
+            <span class="swatch"><i class="fa-solid fa-check"></i></span>
+            <span class="swatch"><i class="fa-solid fa-check"></i></span>
+          </div>
+          <button class="cta">
+            <i class="fa-solid fa-cart-shopping"></i> Add to Cart — $129
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

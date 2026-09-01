@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">◆ NEXUS AI</div>
+      <nav class="nav">
+        <a class="active" href="#"><span class="dot"></span> Overview</a>
+        <a href="#"><span class="dot"></span> Models</a>
+        <a href="#"><span class="dot"></span> Datasets</a>
+        <a href="#"><span class="dot"></span> Inference Logs</a>
+        <a href="#"><span class="dot"></span> API Keys</a>
+        <a href="#"><span class="dot"></span> Billing</a>
+        <a href="#"><span class="dot"></span> Settings</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <h1>AI Dashboard</h1>
+          <p>Model performance & usage overview</p>
+        </div>
+        <input class="search" placeholder="Search models, logs, keys..." />
+      </div>
+
+      <section class="grid-stats">
+        <div class="card">
+          <div class="label">API Requests</div>
+          <div class="value">2.84M</div>
+          <div class="delta up">▲ 12.4% this week</div>
+        </div>
+        <div class="card">
+          <div class="label">Avg Latency</div>
+          <div class="value">184ms</div>
+          <div class="delta up">▼ 8.1% faster</div>
+        </div>
+        <div class="card">
+          <div class="label">Active Models</div>
+          <div class="value">7</div>
+          <div class="delta up">▲ 2 new</div>
+        </div>
+        <div class="card">
+          <div class="label">Token Usage</div>
+          <div class="value">412K</div>
+          <div class="delta down">▼ 3.2% vs last week</div>
+        </div>
+      </section>
+
+      <section class="grid-main">
+        <div class="panel">
+          <h3>Requests Over Time <span>Last 7 days</span></h3>
+          <div class="bars">
+            <div class="bar" style="height: 45%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 38%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 65%"></div>
+            <div class="bar" style="height: 92%"></div>
+            <div class="bar" style="height: 73%"></div>
+          </div>
+          <div class="bar-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+            ><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+
+          <div class="models">
+            <div class="model-row">
+              <span>GPT-Vision Pro</span
+              ><span style="color: var(--muted)">92%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 92%"></div>
+            </div>
+
+            <div class="model-row">
+              <span>Nexus-7B Chat</span
+              ><span style="color: var(--muted)">78%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 78%"></div>
+            </div>
+
+            <div class="model-row">
+              <span>Whisper Turbo</span
+              ><span style="color: var(--muted)">54%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" style="width: 54%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Recent Activity <span>Live</span></h3>
+          <div class="feed">
+            <div class="feed-item">
+              <div class="avatar">UZ</div>
+              <div>
+                <div class="txt">
+                  <b>Uzair</b> deployed a new fine-tune of <b>Nexus-7B</b>
+                </div>
+                <div class="time">2 minutes ago</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="avatar">SY</div>
+              <div>
+                <div class="txt">
+                  <b>System</b> flagged a latency spike on <b>Whisper Turbo</b>
+                </div>
+                <div class="time">18 minutes ago</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="avatar">AK</div>
+              <div>
+                <div class="txt"><b>Aisha K.</b> generated a new API key</div>
+                <div class="time">1 hour ago</div>
+              </div>
+            </div>
+            <div class="feed-item">
+              <div class="avatar">SY</div>
+              <div>
+                <div class="txt">
+                  <b>System</b> completed nightly dataset sync
+                </div>
+                <div class="time">6 hours ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

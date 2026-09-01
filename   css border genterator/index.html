@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Border Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>CSS Border Generator</h1>
+      <p class="sub">
+        Design a border visually, copy the CSS instantly — no libraries.
+      </p>
+
+      <div class="grid">
+        <div class="panel">
+          <h2>Controls</h2>
+
+          <div class="field">
+            <label
+              >Border Width <span class="val" id="widthVal">4px</span></label
+            >
+            <input type="range" id="width" min="0" max="30" value="4" />
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label>Style</label>
+              <select id="style">
+                <option value="solid">Solid</option>
+                <option value="dashed">Dashed</option>
+                <option value="dotted">Dotted</option>
+                <option value="double">Double</option>
+                <option value="groove">Groove</option>
+                <option value="ridge">Ridge</option>
+                <option value="inset">Inset</option>
+                <option value="outset">Outset</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Color</label>
+              <input type="color" id="color" value="#a855f7" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label
+              >Border Radius <span class="val" id="radiusVal">12px</span></label
+            >
+            <input type="range" id="radius" min="0" max="100" value="12" />
+          </div>
+
+          <div class="field">
+            <label
+              >Box Shadow Spread
+              <span class="val" id="shadowVal">0px</span></label
+            >
+            <input type="range" id="shadow" min="0" max="40" value="0" />
+          </div>
+
+          <div class="field">
+            <label>Shadow Color</label>
+            <input type="color" id="shadowColor" value="#06b6d4" />
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Preview</h2>
+          <div class="preview-stage">
+            <div id="preview-box"></div>
+          </div>
+          <h2>CSS Output</h2>
+          <div class="code-box">
+            <button class="copy-btn" id="copyBtn">Copy</button>
+            <span id="codeOutput"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

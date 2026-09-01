@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animated Login Screen | Uzair WebCraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="blob purple"></div>
+    <div class="blob cyan"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="login-card">
+      <div class="icon-wrap">👤</div>
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Sign in to continue to your account</p>
+      <form id="loginForm">
+        <div class="field">
+          <input type="email" required id="email" placeholder="" />
+          <label>Email address</label>
+        </div>
+
+        <div class="field">
+          <input type="password" required id="password" placeholder="" />
+          <label>Password</label>
+        </div>
+
+        <div class="row">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn" id="submitBtn">
+          <span class="btn-text">Sign In</span>
+          <span class="spinner"></span>
+        </button>
+      </form>
+
+      <div class="divider">or continue with</div>
+      <div class="socials">
+        <button aria-label="Google" style="font-size: 18px">🔍</button>
+        <button aria-label="Github" style="font-size: 18px">🐙</button>
+        <button aria-label="Apple" style="font-size: 18px">🍎</button>
+      </div>
+
+      <p class="signup-text">Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

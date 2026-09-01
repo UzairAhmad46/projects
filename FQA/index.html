@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Section — Glassmorphism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="faq-wrap">
+      <div class="faq-header">
+        <span class="faq-tag">FAQ</span>
+        <h1>Got Questions?</h1>
+        <p>
+          Everthing you need to know before getting started -- no fluff, just
+          answers.
+        </p>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item active">
+          <button class="faq-question">
+            What is this component built with?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Pure HTML,CSS and a tiny bit of vanilla javascript for the toggle
+              logic --- no external libraries or frameworks required.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I use this in a real project?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes -- drop it into any page, swap the copy and colors, and it
+              works out of the box. it's fully responsive and accessible
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Does it support multiple open items?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              By default only one FAQ stays open at a time for a cleaner look,
+              but you can flip a single line in the JS to allow multiple open
+              panels.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is it mobile Friendly?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Completely --- the layout is fluid with clamp-based typography and
+              touch-friendly tap targets on every question.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Where can i find more components like this?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Check out Uzair WebCraft on Youtube for more css and js UI
+              components,built and explained step by step
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

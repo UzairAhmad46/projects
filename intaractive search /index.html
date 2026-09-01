@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Search Bar | Uzair WebCraft ↑↓</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Find anything, instantly</h1>
+
+    <div class="search-wrap">
+      <div class="search-bar" id="searchBar">
+        <i class="fa-solid fa-magnifying-glass icon"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search components, docs, tutorials..."
+        />
+        <div class="kbd"><span>⌘</span><span>K</span></div>
+        <button class="clear-btn" id="clearBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="suggestions" id="suggestions">
+        <div class="sug-item" data-i="0">
+          <i class="fa-solid fa-layer-group sug-icon"></i>
+          Glassmorphism Card Tutorial <span class="tag">CSS</span>
+        </div>
+        <div class="sug-item" data-i="1">
+          <i class="fa-solid fa-cube sug-icon"></i>
+          3D Tilt Card Effect <span class="tag">JS</span>
+        </div>
+        <div class="sug-item" data-i="2">
+          <i class="fa-solid fa-border-all sug-icon"></i>
+          Neon Grid Animation <span class="tag">CSS</span>
+        </div>
+        <div class="sug-item" data-i="3">
+          <i class="fa-solid fa-droplet sug-icon"></i>
+          Gooey Loader Animation <span class="tag">SVG</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">
+      Press <strong>Esc</strong> to close · <strong>↑↓</strong> to navigate ·
+      <strong>Enter</strong> to select
+    </p>
+    <script src="script.js"></script>
+  </body>
+</html>

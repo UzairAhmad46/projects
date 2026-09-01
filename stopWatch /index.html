@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Stopwatch</h1>
+      <div class="time">
+        <span id="display">00:00:00</span>
+        <span class="ms" id="ms">.00</span>
+      </div>
+      <div class="controls">
+        <button id="startBtn" onclick="toggle()">Start</button>
+        <button id="lapBtn" id="lapBtn" onclick="lap()">Lap</button>
+
+        <button id="resetBtn" onclick="reset()">Reset</button>
+      </div>
+      <div class="laps" id="laps"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

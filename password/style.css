@@ -1,0 +1,151 @@
+:root {
+  --bg: #080810;
+  --purple: #a855f7;
+  --cyan: #06b6d4;
+  --text: #f1f1f5;
+  --muted: #8a8a9a;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(168, 85, 247, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(6, 182, 212, 0.15),
+      transparent 40%
+    ),
+    var(--bg);
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text);
+}
+
+.card {
+  width: 360px;
+  padding: 36px 32px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+p.sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input[type='password'],
+input[type='text'] {
+  width: 100%;
+  padding: 14px 44px 14px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.25 ease,
+    box-shadow 0.25s easse;
+}
+
+input::placeholder {
+  color: #5a5a6a;
+}
+
+input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.toggle-btn:hover {
+  color: var(--cyan);
+}
+
+.toggle-btn:active {
+  transform: scale(0.9);
+}
+
+.toggle-btn {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.eye-off {
+  display: none;
+}
+
+.toggle-btn.active .eye {
+  display: none;
+}
+
+.toggle-btn.active .eye-off {
+  display: inline;
+}
+
+.toggle-btn.active {
+  color: var(--purple);
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.2px;
+}
